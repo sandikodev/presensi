@@ -5,7 +5,7 @@ import { login, signGit, signup } from './actions'
 export default function LoginPage() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="bg-white/10 rounded-md p-6 border border-white/5 w-[300px]">
+      <div className="bg-gray-300/40 dark:bg-white/10 rounded-md p-6 border border-white/5 w-[300px]">
         <div className="flex justify-center mb-6 mt-2"><SupabaseLogo /></div>
         <form className='flex flex-col gap-2'>
           <Label htmlFor="email">Email:</Label>
@@ -29,7 +29,7 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> { }
 interface LabelProps extends React.LabelHTMLAttributes<HTMLLabelElement> { }
 
 const Button: React.FC<ButtonProps> = ({ children, ...rest }) => {
-  return <button className="rounded hover:bg-white hover:text-black font-semibold px-4 py-2 border border-white/20 transition duration-100 ease-in-out" {...rest}>
+  return <button className="rounded hover:bg-gray-300 bg-gray-400/20 dark:hover:bg-white dark:hover:text-black font-semibold px-4 py-2 border border-white/20 transition duration-100 ease-in-out" {...rest}>
     {children}
   </button>
 }
@@ -39,7 +39,7 @@ const Input: React.FC<InputProps> = ({ ...rest }) => {
 }
 
 const Label: React.FC<LabelProps> = ({ children, ...rest }) => {
-  return <label {...rest} className="text-sm text-white/30">{children}</label>
+  return <label {...rest} className="text-sm dark:text-white/30">{children}</label>
 }
 
 const Separator = () => <hr className="border-white/10 my-2" />
